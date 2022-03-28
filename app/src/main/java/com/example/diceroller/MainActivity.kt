@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputEditText
 
 /**
  * This activity allows the user to roll a dice and view the result
@@ -25,7 +26,12 @@ class MainActivity : AppCompatActivity() {
      */
     private fun rollDice() {
         // Create new Dice object with 6 sides and roll it
-        val dice = Dice(6)
+        val diceSizeInput : TextInputEditText = findViewById(R.id.diceSizeInput)
+        var diceSize = 6
+        if (!diceSizeInput.text.toString().isNullOrBlank()) {
+            diceSize = Integer.parseInt(diceSizeInput.text.toString())
+        }
+        val dice = Dice(diceSize)
 
         val diceRoll = dice.roll()
 
