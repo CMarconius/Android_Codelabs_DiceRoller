@@ -6,12 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:contentDescription="TODO"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bck_1" />
+
     <Button
         android:id="@+id/superMegaButton4000"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="@string/roll"
+        android:textColor="#070D20"
+        android:textStyle="bold"
+        app:backgroundTint="#009688"
         app:layout_constraintEnd_toEndOf="@+id/superMegaDiceRollText"
         app:layout_constraintStart_toStartOf="@+id/superMegaDiceRollText"
         app:layout_constraintTop_toBottomOf="@+id/superMegaDiceRollText" />
@@ -20,6 +34,7 @@
         android:id="@+id/superMegaDiceRollText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
         android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -36,6 +51,7 @@
         android:layout_marginTop="204dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/enter_the_size_of_your_dice"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
