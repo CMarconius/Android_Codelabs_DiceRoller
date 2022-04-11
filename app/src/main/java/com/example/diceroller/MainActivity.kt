@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice() {
         // Create new Dice object with 6 sides and roll it
         val diceSizeInput : TextInputEditText = findViewById(R.id.diceSizeInput)
-        var diceSize = 6
+        var diceSize = 20
         if (!diceSizeInput.text.toString().isNullOrBlank()) {
             diceSize = Integer.parseInt(diceSizeInput.text.toString())
         }
@@ -39,12 +39,17 @@ class MainActivity : AppCompatActivity() {
         val resultTextView: TextView = findViewById(R.id.superMegaDiceRollText)
 
         resultTextView.text = diceRoll.toString()
+
+        when(diceRoll) {
+            20 -> println("Holy potatoes! NAT 20!!!")
+        }
     }
 }
 
 class Dice(private val numSides: Int) {
 
     fun roll(): Int {
+
         return (1..numSides).random()
     }
 }
