@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private fun rollDice() {
         // Create new Dice object with 6 sides and roll it
         val diceSizeInput : TextInputEditText = findViewById(R.id.diceSizeInput)
-        var diceSize = 20
+        var diceSize = 6
         if (!diceSizeInput.text.toString().isNullOrBlank()) {
             diceSize = Integer.parseInt(diceSizeInput.text.toString())
         }
@@ -37,12 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         // Update the screen with the dice roll
         val resultTextView: TextView = findViewById(R.id.superMegaDiceRollText)
+        if(diceRoll == 20) {
+            resultTextView.text = "Wow! Nat 20! xD"
+        } else resultTextView.text = diceRoll.toString()
 
-        resultTextView.text = diceRoll.toString()
 
-        when(diceRoll) {
-            20 -> println("Holy potatoes! NAT 20!!!")
-        }
     }
 }
 
