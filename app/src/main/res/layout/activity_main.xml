@@ -15,7 +15,8 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/bck_1" />
+        app:srcCompat="@drawable/bck_1"
+        tools:ignore="ImageContrastCheck" />
 
     <Button
         android:id="@+id/superMegaButton4000"
@@ -80,5 +81,14 @@
             android:textSize="24sp"
             tools:ignore="TextContrastCheck" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="378dp"
+        android:layout_height="341dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
