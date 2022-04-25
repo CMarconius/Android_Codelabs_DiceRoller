@@ -39,7 +39,10 @@ class MainActivity : AppCompatActivity() {
         val resultTextView: TextView = findViewById(R.id.superMegaDiceRollText)
         if(diceRoll == 20) {
             resultTextView.text = "Wow! Nat 20! xD"
-        } else resultTextView.text = diceRoll.toString()
+        } else if (diceRoll == 8 || diceRoll == 11 || diceRoll == 18) {
+            resultTextView.text = "You rolled an " + diceRoll.toString()
+        } else { resultTextView.text = "You rolled a " + diceRoll.toString()
+        }
 
 
     }
